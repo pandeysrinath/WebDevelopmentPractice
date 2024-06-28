@@ -2,7 +2,7 @@
     border: 1px solid #ddd;
     padding: 20px;
     background-color: #fff;
-    max-width: 400px;
+    min-width: 80%;
     margin: 0 auto;
 
     .card-content {
@@ -10,35 +10,27 @@
         justify-content: space-between;
         align-items: center;
 
-        .card-text {
-            flex: 1;
+        .card-text:nth-child(1) {
+            flex-grow: 2;
             margin-right: 20px;
             text-align: left;
         }
 
         .social-icons {
             display: flex;
-            flex: 1;
-            gap: 10px;
             text-align: right;
             flex-flow: wrap;
             justify-content: flex-end;
 
             .icon {
                 display: block;
-                /* Ensure SVGs are block elements */
-                width: 24px;
-                /* Set icon size */
-                height: 24px;
-                /* Set icon size */
-                fill: #333;
-                /* Icon color */
+                margin: 0 10px 0 10px;
                 transition: fill 0.3s ease;
                 /* Smooth color transition */
 
                 &:hover {
                     opacity: 0.8;
-                    /* Example hover color */
+                    /* Set opacity */
                 }
             }
 
