@@ -1,0 +1,92 @@
+.card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: #fff;
+    max-width: 400px;
+    margin: 0 auto;
+
+    .card-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .card-text {
+            flex: 1;
+            margin-right: 20px;
+            text-align: left;
+        }
+
+        .social-icons {
+            display: flex;
+            flex: 1;
+            gap: 10px;
+            text-align: right;
+            flex-flow: wrap;
+            justify-content: flex-end;
+
+            .icon {
+                display: block;
+                /* Ensure SVGs are block elements */
+                width: 24px;
+                /* Set icon size */
+                height: 24px;
+                /* Set icon size */
+                fill: #333;
+                /* Icon color */
+                transition: fill 0.3s ease;
+                /* Smooth color transition */
+
+                &:hover {
+                    opacity: 0.8;
+                    /* Example hover color */
+                }
+            }
+
+        }
+    }
+
+    img {
+        width: 18px;
+        height: 18px;
+    }
+
+
+    .tooltip {
+        position: relative;
+        display: inline-block;
+        /* border-bottom: 1px dotted black; */
+    }
+
+    .tooltip {
+
+        .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 150%;
+            left: 50%;
+            margin-left: -60px;
+        }
+
+        .tooltiptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: black transparent transparent transparent;
+        }
+
+        &:hover .tooltiptext {
+            visibility: visible;
+        }
+    }
+}
