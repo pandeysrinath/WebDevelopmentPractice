@@ -46,43 +46,48 @@
         filter: grayscale(10);
     }
 
-
     .tooltip {
         position: relative;
         display: inline-block;
         /* border-bottom: 1px dotted black; */
-    }
-
-    .tooltip {
 
         .tooltiptext {
             visibility: hidden;
-            width: 120px;
+            width: 80px;
+            /* Reduced width */
             background-color: black;
             color: #fff;
             text-align: center;
-            border-radius: 6px;
-            padding: 5px 0;
+            border-radius: 4px;
+            /* Adjusted border radius */
+            padding: 3px 0;
+            /* Reduced padding */
+            font-size: 10px;
+            /* Reduced font size */
             position: absolute;
             z-index: 1;
             bottom: 150%;
             left: 50%;
-            margin-left: -60px;
-        }
+            margin-left: -40px;
+            /* Adjusted margin to center tooltip */
 
-        .tooltiptext::after {
-            content: "";
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            margin-left: -5px;
-            border-width: 5px;
-            border-style: solid;
-            border-color: black transparent transparent transparent;
+            &::after {
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                margin-left: -4px;
+                /* Adjusted arrow positioning */
+                border-width: 4px;
+                /* Adjusted arrow size */
+                border-style: solid;
+                border-color: black transparent transparent transparent;
+            }
         }
 
         &:hover .tooltiptext {
             visibility: visible;
         }
     }
+
 }
